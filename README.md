@@ -77,28 +77,32 @@ IV. Use-case diagram:
  
 
 1.2 List of Use-case:
-Orders	Use Case	Functional Description / Requirement Specification
-1	Register	Allows a new user to create an account to access the system.
-2	Login	Allows a user to log in with valid credentials. The session remains active until the user logs out or the session times out.
-3	Search Room	Enables users to search for available rooms based on filters such as date, room type, or price (Extends: View Room Detail).
-4	View Room Detail	Displays detailed information about a selected room (type, price, facilities, description, etc.).
-5	Book Room	Allows customers to reserve a room for selected dates. (Includes: Process Payment, Update Booking Status).
-6	Process Payment	Handles the processing of customer transactions when booking a room (Includes: Update Payment Status).
-7	Update Payment Status	Updates the status of a payment (successful, failed, refunded, etc.).
-8	Update Booking Status	Updates the status of a booking (booked, confirmed, canceled, completed, etc.).
-9	Cancel Booking	Allows customers to cancel an existing booking (Includes: Provide Reason, Update Booking Status), and (Extends: Refund Payment).
-10	Provide Reason	Collects the reason from the customer when canceling a booking (Included from Cancel Booking).
-11	Refund Payment	Processes a refund after a booking is canceled (Extended from Update Payment Status).
-12	Update Profile	Allows customers to edit their personal information (name, phone number, email, password, etc.).
-13	Manage Customer	Enables the Administrator to view, edit, or delete customer accounts.
-14	Add Room	Allows the Administrator to add a new room into the system (Extended from Manage Room).
-15	Update Room	Allows the Administrator to modify an existing room’s details (Extended from Manage Room).
-16	Delete Room	Allows the Administrator to remove a room from the system (Extended from Manage Room).
-17	Manage Booking	Enables the Administrator to manage customer bookings (Extends: View Booking Customers’ Histories).
-18	Manage Room	Allows the Administrator to manage and maintain all room-related data (Extends: Add, Update, Delete Room).
-19	View Booking History	Allows customers to view their personal booking history.
-20	View Booking Customers’ Histories	Allows the Administrator to view all customers’ booking histories.
-21	View Reports	Allows the Administrator to view or export system reports (revenue, booking statistics, payment summaries, etc.).
+## 🧩 Use Case Functional Descriptions
+
+| Orders | Use Case | Functional Description / Requirement Specification |
+|:-------:|:----------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **1** | **Register** | Allows a new user to create an account to access the system. |
+| **2** | **Login** | Allows a user to log in with valid credentials. The session remains active until the user logs out or the session times out. |
+| **3** | **Search Room** | Enables users to search for available rooms based on filters such as date, room type, or price (**Extends:** View Room Detail). |
+| **4** | **View Room Detail** | Displays detailed information about a selected room (type, price, facilities, description, etc.). |
+| **5** | **Book Room** | Allows customers to reserve a room for selected dates. (**Includes:** Process Payment, Update Booking Status). |
+| **6** | **Process Payment** | Handles the processing of customer transactions when booking a room (**Includes:** Update Payment Status). |
+| **7** | **Update Payment Status** | Updates the status of a payment (successful, failed, refunded, etc.). |
+| **8** | **Update Booking Status** | Updates the status of a booking (booked, confirmed, canceled, completed, etc.). |
+| **9** | **Cancel Booking** | Allows customers to cancel an existing booking (**Includes:** Provide Reason, Update Booking Status) and (**Extends:** Refund Payment). |
+| **10** | **Provide Reason** | Collects the reason from the customer when canceling a booking (**Included from:** Cancel Booking). |
+| **11** | **Refund Payment** | Processes a refund after a booking is canceled (**Extended from:** Update Payment Status). |
+| **12** | **Update Profile** | Allows customers to edit their personal information (name, phone number, email, password, etc.). |
+| **13** | **Manage Customer** | Enables the Administrator to view, edit, or delete customer accounts. |
+| **14** | **Add Room** | Allows the Administrator to add a new room into the system (**Extended from:** Manage Room). |
+| **15** | **Update Room** | Allows the Administrator to modify an existing room’s details (**Extended from:** Manage Room). |
+| **16** | **Delete Room** | Allows the Administrator to remove a room from the system (**Extended from:** Manage Room). |
+| **17** | **Manage Booking** | Enables the Administrator to manage customer bookings (**Extends:** View Booking Customers’ Histories). |
+| **18** | **Manage Room** | Allows the Administrator to manage and maintain all room-related data (**Extends:** Add, Update, Delete Room). |
+| **19** | **View Booking History** | Allows customers to view their personal booking history. |
+| **20** | **View Booking Customers’ Histories** | Allows the Administrator to view all customers’ booking histories. |
+| **21** | **View Reports** | Allows the Administrator to view or export system reports (revenue, booking statistics, payment summaries, etc.). |
+
 
 2. Actor: User
 2.1. Use case: Register
