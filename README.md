@@ -57,13 +57,14 @@ II. Non-Functional Requirements
 •	Complies with the Vietnam Cybersecurity Law and personal data protection regulations.
 •	Customer information (name, phone, email, stay history) is used only for hotel service purposes.
 •	No customer data is shared with third parties without consent.
+
 III. Data Flow Diagram:
- ![DFD Level 0](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-DFD%20Level%200.drawio.png)
- ![DFD Level 1](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-DFD%20Level%201.drawio.png)
+ ![DFD Level 0](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_DFDLevel_0.png)
+ ![DFD Level 1](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_DFDLevel_1.png)
 
 IV. Use-case diagram:
 1.	Sơ đồ tổng quan:
-![Use-Case Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-Q.Trang.drawio.png)
+![Use-Case Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Q_Trang.png)
 
 1.1.	List of actors:
 Orders 	Actor	Functional Description / Requirement Specification
@@ -231,10 +232,12 @@ Includes:
 5.8.1. Description: Administrator can generate and view reports about room usage, bookings, and payments.
 5.8.2. Postconditions:
 •	Reports are displayed or exported for analysis.
+
 V. Class diagram:
-![Class Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-Ho%C3%A0i.drawio.png)
+![Class Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Ho%C3%A0i.png)
+
 VI. Data model:
-![Data model](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-Trang.drawio.png)
+![Data model](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Trang.png)
  
 BẢNG ĐÁNH GIÁ THÀNH VIÊN
 Họ và tên	MSSV	Nhiệm vụ	Mức độ hoàn thành
