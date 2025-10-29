@@ -1,14 +1,14 @@
 Hotel Room Booking System Specification
-I. Functional Requirements
-The Hotel Room Booking System supports customers in searching, viewing information, booking rooms, making payments, and managing their reservations.
-It also assists receptionists or administrators in managing rooms, bookings, users, and tracking room usage status within the hotel.
-The system is designed for standalone hotels or small chains (2–3 branches), operating on a moderate scale but expandable when needed.
-1. View and Search Rooms
-•	Users can view the list of rooms by type (Standard, Deluxe, Suite, Family, VIP, etc.).
-•	The list can be sorted by price, maximum occupancy, rating, or availability.
-•	Rooms can be searched by name, check-in/check-out date, number of guests, price range, or room type.
-•	Each room displays images, a brief description, amenities, and nightly rate.
-•	When selecting a room, users can view detailed information including large images, full description, amenities, availability, and reviews from other guests.
+I. Functional Requirements  
+The Hotel Room Booking System supports customers in searching, viewing information, booking rooms, making payments, and managing their reservations.  
+It also assists receptionists or administrators in managing rooms, bookings, users, and tracking room usage status within the hotel.  
+The system is designed for standalone hotels or small chains (2–3 branches), operating on a moderate scale but expandable when needed.  
+1. View and Search Rooms  
+•	Users can view the list of rooms by type (Standard, Deluxe, Suite, Family, VIP, etc.).  
+•	The list can be sorted by price, maximum occupancy, rating, or availability.  
+•	Rooms can be searched by name, check-in/check-out date, number of guests, price range, or room type.  
+•	Each room displays images, a brief description, amenities, and nightly rate.  
+•	When selecting a room, users can view detailed information including large images, full description, amenities, availability, and reviews from other guests.  
 2. Customer Account Management (Member)
 •	Users can register customers account with details: name, gender, date of birth, email, phone number, password, and address.
 •	They can log in, change passwords, and update personal information (except email).
