@@ -58,13 +58,13 @@ II. Non-Functional Requirements
 •	Customer information (name, phone, email, stay history) is used only for hotel service purposes.
 •	No customer data is shared with third parties without consent.
 III. Data Flow Diagram:
- 
- 
-
+ ![DFD Level 0](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-DFD%20Level%200.drawio.png)
+ ![DFD Level 1](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-DFD%20Level%201.drawio.png)
 
 IV. Use-case diagram:
 1.	Sơ đồ tổng quan:
- 
+![Use-Case Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-Q.Trang.drawio.png)
+
 1.1.	List of actors:
 Orders 	Actor	Functional Description / Requirement Specification
 1	User	A non-registered or not-logged-in person who can browse and search rooms, and view room details, but cannot make bookings.
@@ -232,9 +232,9 @@ Includes:
 5.8.2. Postconditions:
 •	Reports are displayed or exported for analysis.
 V. Class diagram:
- 
+![Class Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-Ho%C3%A0i.drawio.png)
 VI. Data model:
- 
+![Data model](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-Trang.drawio.png)
  
 BẢNG ĐÁNH GIÁ THÀNH VIÊN
 Họ và tên	MSSV	Nhiệm vụ	Mức độ hoàn thành
