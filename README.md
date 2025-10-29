@@ -80,7 +80,7 @@ IV. Use-case diagram:
 ## Use Case Functional Descriptions
 
 | Orders | Use Case | Functional Description / Requirement Specification |
-|:-------:|:----------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|:-------:|:----------------------------|:---------------------------------|
 | **1** | **Register** | Allows a new user to create an account to access the system. |
 | **2** | **Login** | Allows a user to log in with valid credentials. The session remains active until the user logs out or the session times out. |
 | **3** | **Search Room** | Enables users to search for available rooms based on filters such as date, room type, or price (**Extends:** View Room Detail). |
