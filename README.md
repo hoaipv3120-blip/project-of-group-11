@@ -244,9 +244,7 @@ Includes:
 ## VI. Data model:
 ![Data model](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Trang.png)
  
-BẢNG ĐÁNH GIÁ THÀNH VIÊN
-## Team Members and Task Distribution
-
+## BẢNG ĐÁNH GIÁ THÀNH VIÊN  
 | Họ và tên | MSSV | Nhiệm vụ | Mức độ hoàn thành |
 |:----------------------|:------------------:|:-------------------------------------------------------|:----------------:|
 | **Phan Việt Hoài** | 054206003120 | Đặc tả Functional, Non-Functional, Class Diagram | 100% |
