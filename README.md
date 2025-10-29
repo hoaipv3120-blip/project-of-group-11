@@ -183,62 +183,62 @@ IV. Use-case diagram:
 3.4.1. Description: System can refund the payment amount to the customer’s account.  
  Trigger: Extend from Cancel Booking.  
 3.4.2. Includes:  
-•	Update Payment Status
-3.5. Use case: View Booking History
-3.5.1. Description: Customer can see the booking records of customers.
-3.5.2. Trigger: 
-•	Extended from Manage Booking.
-4. Actor: Payment
-4.1. Use case: Process Payment
-4.1.1. Description: Payment actor can process transactions when customers book a room.
-4.1.2. Includes:
-•	Update Payment Status
-4.1.3. Main Flow:
-•	System sends a payment request.
-•	Payment actor processes transaction.
-•	System updates payment status.
-•	Customer receives confirmation.
-4.2. Use case: Update Payment Status
-4.2.1. Description: Payment actor can update the payment record (success, failure, refund).
-4.2.2. Trigger:
-•	Included from Process Payment or Refund Payment.
-5. Actor: Administrator
-5.1. Use case: Manage Customer
-5.1.1. Description: Administrator can view, edit, and remove customer accounts.
-5.1.2. Preconditions:
-•	Admin is logged in.
-5.1.3. Postconditions:
-•	Customer information is updated or deleted as requested.
-5.2. Use case: Manage Room
-5.2.1. Description: Administrator can manage room information in the system.
-5.2.2. Extensions:
-•	Add Room
-•	Update Room
-•	Delete Room
-5.3. Use case: Add Room
-5.3.1. Description: Administrator can add new room details to the system.
-5.3.2. Trigger: 
-•	Extended from Manage Room.
-5.4. Use case: Update Room
-5.4.1. Description: Administrator can modify details of an existing room.
-5.4.2. Trigger: 
-•	Extended from Manage Room.
-5.5. Use case: Delete Room
-5.5.1. Description: Administrator can remove room data from the system.
-5.5.2. Trigger: 
-•	Extended from Manage Room.
-5.6. Use case: Manage Booking
-5.6.1. Description: Administrator can view and manage customer bookings.
-Includes:
-•	View Booking History
-5.7. Use case: View Booking Customers’ Histories
-5.7.1. Description: Administrator can see the booking records of customers.
-5.7.2. Trigger: 
-•	Extended from Manage Booking.
-5.8. Use case: View Reports
-5.8.1. Description: Administrator can generate and view reports about room usage, bookings, and payments.
-5.8.2. Postconditions:
-•	Reports are displayed or exported for analysis.
+•	Update Payment Status  
+3.5. Use case: View Booking History  
+3.5.1. Description: Customer can see the booking records of customers.  
+3.5.2. Trigger:  
+•	Extended from Manage Booking.  
+4. Actor: Payment  
+4.1. Use case: Process Payment  
+4.1.1. Description: Payment actor can process transactions when customers book a room.  
+4.1.2. Includes:  
+•	Update Payment Status  
+4.1.3. Main Flow:  
+•	System sends a payment request.  
+•	Payment actor processes transaction.  
+•	System updates payment status.  
+•	Customer receives confirmation.  
+4.2. Use case: Update Payment Status  
+4.2.1. Description: Payment actor can update the payment record (success, failure, refund).  
+4.2.2. Trigger:  
+•	Included from Process Payment or Refund Payment.  
+5. Actor: Administrator  
+5.1. Use case: Manage Customer  
+5.1.1. Description: Administrator can view, edit, and remove customer accounts.  
+5.1.2. Preconditions:  
+•	Admin is logged in.  
+5.1.3. Postconditions:  
+•	Customer information is updated or deleted as requested.  
+5.2. Use case: Manage Room  
+5.2.1. Description: Administrator can manage room information in the system.  
+5.2.2. Extensions:  
+•	Add Room  
+•	Update Room  
+•	Delete Room  
+5.3. Use case: Add Room  
+5.3.1. Description: Administrator can add new room details to the system.  
+5.3.2. Trigger:  
+•	Extended from Manage Room.  
+5.4. Use case: Update Room  
+5.4.1. Description: Administrator can modify details of an existing room.  
+5.4.2. Trigger:  
+•	Extended from Manage Room.  
+5.5. Use case: Delete Room  
+5.5.1. Description: Administrator can remove room data from the system.  
+5.5.2. Trigger:  
+•	Extended from Manage Room.  
+5.6. Use case: Manage Booking  
+5.6.1. Description: Administrator can view and manage customer bookings.  
+Includes:  
+•	View Booking History  
+5.7. Use case: View Booking Customers’ Histories  
+5.7.1. Description: Administrator can see the booking records of customers.  
+5.7.2. Trigger:  
+•	Extended from Manage Booking.  
+5.8. Use case: View Reports  
+5.8.1. Description: Administrator can generate and view reports about room usage, bookings, and payments.  
+5.8.2. Postconditions:  
+•	Reports are displayed or exported for analysis.  
 
 V. Class diagram:
 ![Class Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Ho%C3%A0i.png)
@@ -247,10 +247,14 @@ VI. Data model:
 ![Data model](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Trang.png)
  
 BẢNG ĐÁNH GIÁ THÀNH VIÊN
-Họ và tên	MSSV	Nhiệm vụ	Mức độ hoàn thành
-Phan Việt Hoài	054206003120	Đặc tả Func, Non-Func, class diagram	100%
-Trịnh Thị Ngọc Điệp	051306006340	Đặc tả Func, Non-Func, DFD	100%
-Phạm Quỳnh Trang	034306001451	Đặc tả Func, Non-Func, Use-case	100%
-Bùi Thị Minh Trang	093306005542	Đặc tả Func, Non-Func, Data model	100%
+## 👥 Team Members and Task Distribution
+
+| Họ và tên | MSSV | Nhiệm vụ | Mức độ hoàn thành |
+|:----------------------|:------------------:|:-------------------------------------------------------|:----------------:|
+| **Phan Việt Hoài** | 054206003120 | Đặc tả Functional, Non-Functional, Class Diagram | 100% |
+| **Trịnh Thị Ngọc Điệp** | 051306006340 | Đặc tả Functional, Non-Functional, Data Flow Diagram (DFD) | 100% |
+| **Phạm Quỳnh Trang** | 034306001451 | Đặc tả Functional, Non-Functional, Use Case | 100% |
+| **Bùi Thị Minh Trang** | 093306005542 | Đặc tả Functional, Non-Functional, Data Model | 100% |
+
 
 
