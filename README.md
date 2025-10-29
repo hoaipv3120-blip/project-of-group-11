@@ -77,7 +77,7 @@ IV. Use-case diagram:
  
 
 1.2 List of Use-case:
-## 🧩 Use Case Functional Descriptions
+## Use Case Functional Descriptions
 
 | Orders | Use Case | Functional Description / Requirement Specification |
 |:-------:|:----------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -104,85 +104,85 @@ IV. Use-case diagram:
 | **21** | **View Reports** | Allows the Administrator to view or export system reports (revenue, booking statistics, payment summaries, etc.). |
 
 
-2. Actor: User
-2.1. Use case: Register
-2.1.1. Description: User can create a new account to access the system.
-2.1.2. Preconditions:
-•	The user has not registered before.
-2.1.3. Postconditions:
-•	A new account is created successfully.
-2.1.4. Main Flow:
-•	User fills in personal information.
-•	System validates the input.
-•	Account is created and saved.
-•	System confirms successful registration.
-2.2. Use case: Login
-2.2.1. Description: User can log in to the system using valid credentials. Once logged in, the session remains active, allowing the user to continue using the system without re-login until logging out or session timeout.
-2.2.2. Preconditions:
-•	User already has a registered account.
-•	No active session currently exists.
-2.2.3. Postconditions:
-•	User session is created and kept active.
-2.2.4. Main Flow:
-•	User accesses the login page.
-•	If a session exists, the system automatically redirects to the homepage.
-•	If not, user enters email and password.
-•	System validates credentials and logs in the user.
-•	User is redirected to the homepage.
-2.3. Use case: Search Room
-2.3.1. Description: User can search for available rooms based on preferences such as date, type, or price.
-2.3.2. Extensions:
-•	<<extend>> View Room Detail – when user selects a specific room.
-2.3.3. Main Flow:
-•	User enters search criteria.
-•	System displays a list of available rooms.
-•	User may view more details about a room.
-2.4. Use case: View Room Detail
-2.4.1. Description: User can view detailed information of a selected room, including type, price, and facilities.
-2.4.2. Trigger: 
-•	Extended from Search Room.
-2.5. Use case: Update profile
-2.5.1. Description: User can edit and update their personal details such as name, phone number, or password.
-2.5.2. Preconditions:
-•	User is logged in.
-2.5.3. Postconditions:
-•	Updated profile information is saved successfully.
-3. Actor: Customer ( inherits from User)
-3.1. Use case: Book Room
-3.1.1. Description: Customer can book an available room for specific dates and complete payment online.
-3.1.2. Preconditions:
-•	Customer is logged in.
-•	Room is available.
-3.1.3. Includes:
-•	Process Payment
-•	Update Booking Status
-3.1.4. Main Flow:
-•	Customer selects a room and booking date.
-•	System checks room availability.
-•	Customer proceeds with payment.
-•	System confirms booking and updates status.
-3.2. Use case: Cancel Booking
-3.2.1. Description: Customer can cancel a previously booked room.
-3.2.2. Preconditions:
-•	Customer has an active booking.
-3.2.3. Includes:
-•	Provide Reason
-•	Refund Payment
-•	Update Booking Status
-3.2.4. Main Flow:
-•	Customer selects booking to cancel.
-•	Customer provides reason.
-•	System processes refund.
-•	System updates booking status.
-•	Cancellation confirmation is displayed.
-3.3. Use case: Provide Reason
-3.3.1. Description: Customer can provide the reason for cancelling a booking.
-3.3.2. Trigger: 
-•	Included from Cancel Booking.
-3.4. Use case: Refund Payment
-3.4.1. Description: System can refund the payment amount to the customer’s account.
- Trigger: Extend from Cancel Booking.
-3.4.2. Includes: 
+2. Actor: User  
+2.1. Use case: Register  
+2.1.1. Description: User can create a new account to access the system.  
+2.1.2. Preconditions:  
+•	The user has not registered before.  
+2.1.3. Postconditions:  
+•	A new account is created successfully.  
+2.1.4. Main Flow:  
+•	User fills in personal information.  
+•	System validates the input.  
+•	Account is created and saved.  
+•	System confirms successful registration.  
+2.2. Use case: Login  
+2.2.1. Description: User can log in to the system using valid credentials. Once logged in, the session remains active, allowing the user to continue using the system without re-login until logging out or session timeout.  
+2.2.2. Preconditions:  
+•	User already has a registered account.  
+•	No active session currently exists.  
+2.2.3. Postconditions:  
+•	User session is created and kept active.  
+2.2.4. Main Flow:  
+•	User accesses the login page.  
+•	If a session exists, the system automatically redirects to the homepage.  
+•	If not, user enters email and password.  
+•	System validates credentials and logs in the user.  
+•	User is redirected to the homepage.  
+2.3. Use case: Search Room  
+2.3.1. Description: User can search for available rooms based on preferences such as date, type, or price.  
+2.3.2. Extensions:  
+•	<<extend>> View Room Detail – when user selects a specific room.  
+2.3.3. Main Flow:  
+•	User enters search criteria.  
+•	System displays a list of available rooms.  
+•	User may view more details about a room.  
+2.4. Use case: View Room Detail  
+2.4.1. Description: User can view detailed information of a selected room, including type, price, and facilities.  
+2.4.2. Trigger:  
+•	Extended from Search Room.  
+2.5. Use case: Update profile  
+2.5.1. Description: User can edit and update their personal details such as name, phone number, or password.  
+2.5.2. Preconditions:  
+•	User is logged in.  
+2.5.3. Postconditions:  
+•	Updated profile information is saved successfully.  
+3. Actor: Customer ( inherits from User)  
+3.1. Use case: Book Room  
+3.1.1. Description: Customer can book an available room for specific dates and complete payment online.  
+3.1.2. Preconditions:  
+•	Customer is logged in.  
+•	Room is available.  
+3.1.3. Includes:  
+•	Process Payment  
+•	Update Booking Status  
+3.1.4. Main Flow:  
+•	Customer selects a room and booking date.  
+•	System checks room availability.  
+•	Customer proceeds with payment.  
+•	System confirms booking and updates status.  
+3.2. Use case: Cancel Booking  
+3.2.1. Description: Customer can cancel a previously booked room.  
+3.2.2. Preconditions:  
+•	Customer has an active booking.  
+3.2.3. Includes:  
+•	Provide Reason  
+•	Refund Payment  
+•	Update Booking Status  
+3.2.4. Main Flow:  
+•	Customer selects booking to cancel.  
+•	Customer provides reason.  
+•	System processes refund.  
+•	System updates booking status.  
+•	Cancellation confirmation is displayed.  
+3.3. Use case: Provide Reason  
+3.3.1. Description: Customer can provide the reason for cancelling a booking.  
+3.3.2. Trigger:  
+•	Included from Cancel Booking.  
+3.4. Use case: Refund Payment  
+3.4.1. Description: System can refund the payment amount to the customer’s account.  
+ Trigger: Extend from Cancel Booking.  
+3.4.2. Includes:  
 •	Update Payment Status
 3.5. Use case: View Booking History
 3.5.1. Description: Customer can see the booking records of customers.
