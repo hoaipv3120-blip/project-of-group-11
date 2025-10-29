@@ -77,8 +77,6 @@ o	Online Payment – via payment gateway (e-wallets, bank cards, QR Pay).
  
 
 #### 1.2 List of Use-case:
-## Use Case Functional Descriptions
-
 | Orders | Use Case | Functional Description / Requirement Specification |
 |:-------:|:----------------------------|:---------------------------------|
 | **1** | **Register** | Allows a new user to create an account to access the system. |
