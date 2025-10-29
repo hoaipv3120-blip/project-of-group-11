@@ -1,73 +1,73 @@
-Hotel Room Booking System Specification
-I. Functional Requirements  
+# Hotel Room Booking System Specification
+## I. Functional Requirements  
 The Hotel Room Booking System supports customers in searching, viewing information, booking rooms, making payments, and managing their reservations.  
 It also assists receptionists or administrators in managing rooms, bookings, users, and tracking room usage status within the hotel.  
 The system is designed for standalone hotels or small chains (2–3 branches), operating on a moderate scale but expandable when needed.  
-1. View and Search Rooms  
+### 1. View and Search Rooms  
 •	Users can view the list of rooms by type (Standard, Deluxe, Suite, Family, VIP, etc.).  
 •	The list can be sorted by price, maximum occupancy, rating, or availability.  
 •	Rooms can be searched by name, check-in/check-out date, number of guests, price range, or room type.  
 •	Each room displays images, a brief description, amenities, and nightly rate.  
 •	When selecting a room, users can view detailed information including large images, full description, amenities, availability, and reviews from other guests.  
-2. Customer Account Management (Member)  
+### 2. Customer Account Management (Member)  
 •	Users can register customers account with details: name, gender, date of birth, email, phone number, password, and address.  
 •	They can log in, change passwords, and update personal information (except email).  
 When a password is forgotten, the system automatically generates a new one and sends it via email.  
-3. Payment  
+### 3. Payment  
 •	Supports two payment methods:  
 o	Pay at Hotel – customers pay upon arrival.  
 o	Online Payment – via payment gateway (e-wallets, bank cards, QR Pay).  
 •	Once payment is successful, the booking status changes to “Confirmed.”  
 •	In case of cancellation, refunds are processed according to the hotel’s refund policy (if applicable).  
-4. Room Booking  
+### 4. Room Booking  
 •	After choosing a room and stay dates, customers fill in booking information (name, phone number, notes, etc.).  
 •	The system checks room availability and calculates the total amount.  
 •	Customers can confirm their booking and choose a payment method.  
 •	Once booked successfully, the system records the reservation and sends an email or notification to confirm.  
-5. Booking Management  
+### 5. Booking Management  
 •	Users can view the list of their past and current bookings.  
 •	Each booking includes: booking ID, check-in/check-out dates, room type, total cost, and status (New, Confirmed, Checked-in, Completed, Cancelled).  
 •	Users can cancel bookings if the status is “New” and before the check-in date.  
-6. System Administration (Admin/Receptionist)  
+### 6. System Administration (Admin/Receptionist)  
 •	Room Management: add, edit, delete, and update room status (available, being cleaned, occupied).  
 •	User Management: view, add, edit, or delete customer accounts.  
 •	Booking Management: view, confirm, modify, or cancel bookings.  
 •	Reports & Statistics: track revenue, occupancy rate, and number of bookings over time.  
-II. Non-Functional Requirements  
-1. Usability  
+## II. Non-Functional Requirements  
+### 1. Usability  
 •	The interface should be simple and easy to understand for both guests and receptionists.  
 •	Fully responsive on desktop, mobile, and tablet.  
 •	Booking process should be short—maximum 3 steps (Select Room → Enter Info → Confirm).  
-2. Reliability  
+### 2. Reliability  
 •	The system should operate stably during business hours or 24/7 as needed.  
 •	Reliability ≥ 98–99%. Data should be backed up daily or weekly.  
-3. Performance  
+### 3. Performance  
 •	Response time for main operations < 3 seconds.  
 •	The system handles up to 200 concurrent requests.  
 •	Storage capacity: 30,000–50,000 accounts and 100,000 bookings.  
 •	Scalable to support additional hotel branches in the future.  
-4. Security  
+### 4. Security  
 •	User data and passwords are encrypted.  
 •	Secure login/logout to prevent unauthorized access.  
 •	Basic access control: Customer and Admin (Receptionist).  
-5. Design Constraints  
+### 5. Design Constraints  
 •	Application runs on a web or web app platform.  
 •	Recommended technologies: C++, Python, Java.  
-6. Legal & Privacy Compliance  
+### 6. Legal & Privacy Compliance  
 •	Complies with the Vietnam Cybersecurity Law and personal data protection regulations.  
 •	Customer information (name, phone, email, stay history) is used only for hotel service purposes.  
 •	No customer data is shared with third parties without consent.  
 
-III. Data Flow Diagram:  
+## III. Data Flow Diagram:  
 
  ![DFD Level 0](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_DFDLevel_0.png)
  ![DFD Level 1](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_DFDLevel_1.png)
 
-IV. Use-case diagram:  
-1.	Sơ đồ tổng quan:  
+## IV. Use-case diagram:  
+### 1.	Sơ đồ tổng quan:  
 ![Use-Case Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Q_Trang.png)
 
-1.1.	List of actors:  
+#### 1.1.	List of actors:  
 | Orders | Actor         | Functional Description / Requirement Specification |
 |:-------:|:--------------|:---------------------------------------------------|
 | **1** | **User** | A non-registered or not-logged-in person who can browse and search rooms, and view room details, but cannot make bookings. |
@@ -76,7 +76,7 @@ IV. Use-case diagram:
 | **4** | **Payment** | An internal or third-party payment service responsible for processing transactions, updating payment status, and handling refunds for canceled bookings. |
  
 
-1.2 List of Use-case:
+#### 1.2 List of Use-case:
 ## Use Case Functional Descriptions
 
 | Orders | Use Case | Functional Description / Requirement Specification |
@@ -104,7 +104,7 @@ IV. Use-case diagram:
 | **21** | **View Reports** | Allows the Administrator to view or export system reports (revenue, booking statistics, payment summaries, etc.). |
 
 
-2. Actor: User  
+### 2. Actor: User  
 2.1. Use case: Register  
 2.1.1. Description: User can create a new account to access the system.  
 2.1.2. Preconditions:  
@@ -147,7 +147,7 @@ IV. Use-case diagram:
 •	User is logged in.  
 2.5.3. Postconditions:  
 •	Updated profile information is saved successfully.  
-3. Actor: Customer ( inherits from User)  
+### 3. Actor: Customer ( inherits from User)  
 3.1. Use case: Book Room  
 3.1.1. Description: Customer can book an available room for specific dates and complete payment online.  
 3.1.2. Preconditions:  
@@ -188,7 +188,7 @@ IV. Use-case diagram:
 3.5.1. Description: Customer can see the booking records of customers.  
 3.5.2. Trigger:  
 •	Extended from Manage Booking.  
-4. Actor: Payment  
+### 4. Actor: Payment  
 4.1. Use case: Process Payment  
 4.1.1. Description: Payment actor can process transactions when customers book a room.  
 4.1.2. Includes:  
@@ -202,7 +202,7 @@ IV. Use-case diagram:
 4.2.1. Description: Payment actor can update the payment record (success, failure, refund).  
 4.2.2. Trigger:  
 •	Included from Process Payment or Refund Payment.  
-5. Actor: Administrator  
+### 5. Actor: Administrator  
 5.1. Use case: Manage Customer  
 5.1.1. Description: Administrator can view, edit, and remove customer accounts.  
 5.1.2. Preconditions:  
@@ -240,14 +240,14 @@ Includes:
 5.8.2. Postconditions:  
 •	Reports are displayed or exported for analysis.  
 
-V. Class diagram:
+## V. Class diagram:
 ![Class Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Ho%C3%A0i.png)
 
-VI. Data model:
+## VI. Data model:
 ![Data model](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Trang.png)
  
 BẢNG ĐÁNH GIÁ THÀNH VIÊN
-## 👥 Team Members and Task Distribution
+## Team Members and Task Distribution
 
 | Họ và tên | MSSV | Nhiệm vụ | Mức độ hoàn thành |
 |:----------------------|:------------------:|:-------------------------------------------------------|:----------------:|
