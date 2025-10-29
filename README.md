@@ -68,11 +68,13 @@ IV. Use-case diagram:
 ![Use-Case Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Q_Trang.png)
 
 1.1.	List of actors:  
-Orders 	Actor	Functional Description / Requirement Specification  
-1	User	A non-registered or not-logged-in person who can browse and search rooms, and view room details, but cannot make bookings.   
-2	Customer	A registered and logged-in user who can search and view room details, book rooms, make payments, cancel bookings, provide cancellation reasons, view booking history, and update personal profile.  
-3	Administrator	The system administrator with full privileges. Responsible for managing customers, managing rooms (add, update, delete), managing bookings, viewing customers’ booking histories, and viewing system reports.  
-4	Payment 	An internal or third-party payment service responsible for processing transactions, updating payment status, and handling refunds for canceled bookings.  
+| Orders | Actor         | Functional Description / Requirement Specification |
+|:-------:|:--------------|:---------------------------------------------------|
+| **1** | **User** | A non-registered or not-logged-in person who can browse and search rooms, and view room details, but cannot make bookings. |
+| **2** | **Customer** | A registered and logged-in user who can search and view room details, book rooms, make payments, cancel bookings, provide cancellation reasons, view booking history, and update personal profile. |
+| **3** | **Administrator** | The system administrator with full privileges. Responsible for managing customers, managing rooms (add, update, delete), managing bookings, viewing customers’ booking histories, and viewing system reports. |
+| **4** | **Payment** | An internal or third-party payment service responsible for processing transactions, updating payment status, and handling refunds for canceled bookings. |
+ 
 
 1.2 List of Use-case:
 Orders	Use Case	Functional Description / Requirement Specification
