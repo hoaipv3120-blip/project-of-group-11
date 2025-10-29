@@ -1,0 +1,60 @@
+Hotel Room Booking System Specification
+I. Functional Requirements
+The Hotel Room Booking System supports customers in searching, viewing information, booking rooms, making payments, and managing their reservations.
+It also assists receptionists or administrators in managing rooms, bookings, users, and tracking room usage status within the hotel.
+The system is designed for standalone hotels or small chains (2–3 branches), operating on a moderate scale but expandable when needed.
+1. View and Search Rooms
+•	Users can view the list of rooms by type (Standard, Deluxe, Suite, Family, VIP, etc.).
+•	The list can be sorted by price, maximum occupancy, rating, or availability.
+•	Rooms can be searched by name, check-in/check-out date, number of guests, price range, or room type.
+•	Each room displays images, a brief description, amenities, and nightly rate.
+•	When selecting a room, users can view detailed information including large images, full description, amenities, availability, and reviews from other guests.
+2. Customer Account Management (Member)
+•	Users can register customers account with details: name, gender, date of birth, email, phone number, password, and address.
+•	They can log in, change passwords, and update personal information (except email).
+When a password is forgotten, the system automatically generates a new one and sends it via email.
+3. Payment
+•	Supports two payment methods:
+o	Pay at Hotel – customers pay upon arrival.
+o	Online Payment – via payment gateway (e-wallets, bank cards, QR Pay).
+•	Once payment is successful, the booking status changes to “Confirmed.”
+•	In case of cancellation, refunds are processed according to the hotel’s refund policy (if applicable).
+4. Room Booking
+•	After choosing a room and stay dates, customers fill in booking information (name, phone number, notes, etc.).
+•	The system checks room availability and calculates the total amount.
+•	Customers can confirm their booking and choose a payment method.
+•	Once booked successfully, the system records the reservation and sends an email or notification to confirm.
+5. Booking Management
+•	Users can view the list of their past and current bookings.
+•	Each booking includes: booking ID, check-in/check-out dates, room type, total cost, and status (New, Confirmed, Checked-in, Completed, Cancelled).
+•	Users can cancel bookings if the status is “New” and before the check-in date.
+6. System Administration (Admin/Receptionist)
+•	Room Management: add, edit, delete, and update room status (available, being cleaned, occupied).
+•	User Management: view, add, edit, or delete customer accounts.
+•	Booking Management: view, confirm, modify, or cancel bookings.
+•	Reports & Statistics: track revenue, occupancy rate, and number of bookings over time.
+II. Non-Functional Requirements
+1. Usability
+•	The interface should be simple and easy to understand for both guests and receptionists.
+•	Fully responsive on desktop, mobile, and tablet.
+•	Booking process should be short—maximum 3 steps (Select Room → Enter Info → Confirm).
+2. Reliability
+•	The system should operate stably during business hours or 24/7 as needed.
+•	Reliability ≥ 98–99%. Data should be backed up daily or weekly.
+3. Performance
+•	Response time for main operations < 3 seconds.
+•	The system handles up to 200 concurrent requests.
+•	Storage capacity: 30,000–50,000 accounts and 100,000 bookings.
+•	Scalable to support additional hotel branches in the future.
+4. Security
+•	User data and passwords are encrypted.
+•	Secure login/logout to prevent unauthorized access.
+•	Basic access control: Customer and Admin (Receptionist).
+5. Design Constraints
+•	Application runs on a web or web app platform.
+•	Recommended technologies: C++, PHP/Python, MySQL, GitHub.
+6. Legal & Privacy Compliance
+•	Complies with the Vietnam Cybersecurity Law and personal data protection regulations.
+•	Customer information (name, phone, email, stay history) is used only for hotel service purposes.
+•	No customer data is shared with third parties without consent.
+
