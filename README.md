@@ -161,9 +161,9 @@ When a password is forgotten, the system automatically generates a new one and s
 •	User is logged in.  
 3.4.3. Postconditions:  
 •	Updated profile information is saved successfully. 
-3.5. Update Booking Status.
-3.5.1. Description: Allows the customer to view and update the booking status.  
-3.5.2. Preconditions:
+3.5. Update Booking Status.  
+3.5.1. Description: Allows the customer to view and update the booking status.   
+3.5.2. Preconditions:  
 •	The booking exists.  
 3.5.3. Postconditions:  
 •	The system updates the booking status.  
