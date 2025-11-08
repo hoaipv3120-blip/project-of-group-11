@@ -7,32 +7,24 @@ The system is designed for standalone hotels or small chains (2–3 branches), o
 •	Users can view the list of rooms by type (Standard, Deluxe, Suite, Family, VIP, etc.).  
 •	The list can be sorted by price, maximum occupancy, rating, or availability.  
 •	Rooms can be searched by name, check-in/check-out date, number of guests, price range, or room type.  
-•	Each room displays images, a brief description, amenities, and nightly rate.  
-•	When selecting a room, users can view detailed information including large images, full description, amenities, availability, and reviews from other guests.  
+•	Each room displays a brief description, amenities, and nightly rate.  
+•	When selecting a room, users can view detailed information including full description, amenities, availability, and reviews from other guests.  
 ### 2. Customer Account Management (Member)  
 •	Users can register customers account with details: name, gender, date of birth, email, phone number, password, and address.  
 •	They can log in, change passwords, and update personal information (except email).  
-When a password is forgotten, the system automatically generates a new one and sends it via email.  
-### 3. Payment  
-•	Supports two payment methods:  
-o	Pay at Hotel – customers pay upon arrival.  
-o	Online Payment – via payment gateway (e-wallets, bank cards, QR Pay).  
-•	Once payment is successful, the booking status changes to “Confirmed.”  
-•	In case of cancellation, refunds are processed according to the hotel’s refund policy (if applicable).  
-### 4. Room Booking  
+When a password is forgotten, the system automatically generates a new one and sends it via email.   
+### 3. Room Booking  
 •	After choosing a room and stay dates, customers fill in booking information (name, phone number, notes, etc.).  
 •	The system checks room availability and calculates the total amount.  
-•	Customers can confirm their booking and choose a payment method.  
 •	Once booked successfully, the system records the reservation and sends an email or notification to confirm.  
-### 5. Booking Management  
+### 4. Booking Management  
 •	Users can view the list of their past and current bookings.  
 •	Each booking includes: booking ID, check-in/check-out dates, room type, total cost, and status (New, Confirmed, Checked-in, Completed, Cancelled).  
 •	Users can cancel bookings if the status is “New” and before the check-in date.  
-### 6. System Administration (Admin/Receptionist)  
+### 5. System Administration (Admin/Receptionist)  
 •	Room Management: add, edit, delete, and update room status (available, being cleaned, occupied).  
 •	User Management: view, add, edit, or delete customer accounts.  
 •	Booking Management: view, confirm, modify, or cancel bookings.  
-•	Reports & Statistics: track revenue, occupancy rate, and number of bookings over time.  
 ## II. Non-Functional Requirements  
 ### 1. Usability  
 •	The interface should be simple and easy to understand for both guests and receptionists.  
@@ -52,7 +44,7 @@ o	Online Payment – via payment gateway (e-wallets, bank cards, QR Pay).
 •	Basic access control: Customer and Admin (Receptionist).  
 ### 5. Design Constraints  
 •	Application runs on a web or web app platform.  
-•	Recommended technologies: C++, Python, Java.  
+•	Recommended technologies: Python.  
 ### 6. Legal & Privacy Compliance  
 •	Complies with the Vietnam Cybersecurity Law and personal data protection regulations.  
 •	Customer information (name, phone, email, stay history) is used only for hotel service purposes.  
@@ -71,8 +63,8 @@ o	Online Payment – via payment gateway (e-wallets, bank cards, QR Pay).
 | Orders | Actor         | Functional Description / Requirement Specification |
 |:-------:|:--------------|:---------------------------------------------------|
 | **1** | **User** | A non-registered or not-logged-in person who can browse and search rooms, and view room details, but cannot make bookings. |
-| **2** | **Customer** | A registered and logged-in user who can search and view room details, book rooms, make payments, cancel bookings, provide cancellation reasons, view booking history, and update personal profile. |
-| **3** | **Administrator** | The system administrator with full privileges. Responsible for managing customers, managing rooms (add, update, delete), managing bookings, viewing customers’ booking histories, and viewing system reports. |
+| **2** | **Customer** | A registered and logged-in user who can search and view room details, book rooms, cancel bookings, provide cancellation reasons, and update personal profile. |
+| **3** | **Administrator** | The system administrator with full privileges. Responsible for managing customers, managing rooms (add, update, delete), managing bookings. |
 | **4** | **Payment** | An internal or third-party payment service responsible for processing transactions, updating payment status, and handling refunds for canceled bookings. |
  
 
@@ -84,22 +76,16 @@ o	Online Payment – via payment gateway (e-wallets, bank cards, QR Pay).
 | **3** | **Search Room** | Enables users to search for available rooms based on filters such as date, room type, or price (**Extends:** View Room Detail). |
 | **4** | **View Room Detail** | Displays detailed information about a selected room (type, price, facilities, description, etc.). |
 | **5** | **Book Room** | Allows customers to reserve a room for selected dates. (**Includes:** Process Payment, Update Booking Status). |
-| **6** | **Process Payment** | Handles the processing of customer transactions when booking a room (**Includes:** Update Payment Status). |
-| **7** | **Update Payment Status** | Updates the status of a payment (successful, failed, refunded, etc.). |
-| **8** | **Update Booking Status** | Updates the status of a booking (booked, confirmed, canceled, completed, etc.). |
-| **9** | **Cancel Booking** | Allows customers to cancel an existing booking (**Includes:** Provide Reason, Update Booking Status) and (**Extends:** Refund Payment). |
-| **10** | **Provide Reason** | Collects the reason from the customer when canceling a booking (**Included from:** Cancel Booking). |
-| **11** | **Refund Payment** | Processes a refund after a booking is canceled (**Extended from:** Update Payment Status). |
-| **12** | **Update Profile** | Allows customers to edit their personal information (name, phone number, email, password, etc.). |
-| **13** | **Manage Customer** | Enables the Administrator to view, edit, or delete customer accounts. |
-| **14** | **Add Room** | Allows the Administrator to add a new room into the system (**Extended from:** Manage Room). |
-| **15** | **Update Room** | Allows the Administrator to modify an existing room’s details (**Extended from:** Manage Room). |
-| **16** | **Delete Room** | Allows the Administrator to remove a room from the system (**Extended from:** Manage Room). |
-| **17** | **Manage Booking** | Enables the Administrator to manage customer bookings (**Extends:** View Booking Customers’ Histories). |
-| **18** | **Manage Room** | Allows the Administrator to manage and maintain all room-related data (**Extends:** Add, Update, Delete Room). |
-| **19** | **View Booking History** | Allows customers to view their personal booking history. |
-| **20** | **View Booking Customers’ Histories** | Allows the Administrator to view all customers’ booking histories. |
-| **21** | **View Reports** | Allows the Administrator to view or export system reports (revenue, booking statistics, payment summaries, etc.). |
+| **6** | **Update Booking Status** | Updates the status of a booking (booked, confirmed, canceled, completed, etc.). |
+| **7** | **Cancel Booking** | Allows customers to cancel an existing booking (**Includes:** Provide Reason, Update Booking Status). |
+| **8** | **Provide Reason** | Collects the reason from the customer when canceling a booking (**Included from:** Cancel Booking). |
+| **9** | **Update Profile** | Allows customers to edit their personal information (name, phone number, email, password, etc.). |
+| **10** | **Manage Customer** | Enables the Administrator to view, edit, or delete customer accounts. |
+| **11** | **Add Room** | Allows the Administrator to add a new room into the system (**Extended from:** Manage Room). |
+| **12** | **Update Room** | Allows the Administrator to modify an existing room’s details (**Extended from:** Manage Room). |
+| **13** | **Delete Room** | Allows the Administrator to remove a room from the system (**Extended from:** Manage Room). |
+| **14** | **Manage Booking** | Enables the Administrator to manage customer bookings. |
+| **15** | **Manage Room** | Allows the Administrator to manage and maintain all room-related data (**Extends:** Add, Update, Delete Room). |
 
 
 ### 2. Actor: User  
@@ -177,66 +163,33 @@ o	Online Payment – via payment gateway (e-wallets, bank cards, QR Pay).
 3.3.1. Description: Customer can provide the reason for cancelling a booking.  
 3.3.2. Trigger:  
 •	Included from Cancel Booking.  
-3.4. Use case: Refund Payment  
-3.4.1. Description: System can refund the payment amount to the customer’s account.  
- Trigger: Extend from Cancel Booking.  
-3.4.2. Includes:  
-•	Update Payment Status  
-3.5. Use case: View Booking History  
-3.5.1. Description: Customer can see the booking records of customers.  
-3.5.2. Trigger:  
-•	Extended from Manage Booking.  
-### 4. Actor: Payment  
-4.1. Use case: Process Payment  
-4.1.1. Description: Payment actor can process transactions when customers book a room.  
-4.1.2. Includes:  
-•	Update Payment Status  
-4.1.3. Main Flow:  
-•	System sends a payment request.  
-•	Payment actor processes transaction.  
-•	System updates payment status.  
-•	Customer receives confirmation.  
-4.2. Use case: Update Payment Status  
-4.2.1. Description: Payment actor can update the payment record (success, failure, refund).  
-4.2.2. Trigger:  
-•	Included from Process Payment or Refund Payment.  
-### 5. Actor: Administrator  
-5.1. Use case: Manage Customer  
-5.1.1. Description: Administrator can view, edit, and remove customer accounts.  
-5.1.2. Preconditions:  
+### 4. Actor: Administrator  
+4.1. Use case: Manage Customer  
+4.1.1. Description: Administrator can view, edit, and remove customer accounts.  
+4.1.2. Preconditions:  
 •	Admin is logged in.  
-5.1.3. Postconditions:  
+4.1.3. Postconditions:  
 •	Customer information is updated or deleted as requested.  
-5.2. Use case: Manage Room  
-5.2.1. Description: Administrator can manage room information in the system.  
-5.2.2. Extensions:  
+4.2. Use case: Manage Room  
+4.2.1. Description: Administrator can manage room information in the system.  
+4.2.2. Extensions:  
 •	Add Room  
 •	Update Room  
 •	Delete Room  
-5.3. Use case: Add Room  
-5.3.1. Description: Administrator can add new room details to the system.  
-5.3.2. Trigger:  
+4.3. Use case: Add Room  
+4.3.1. Description: Administrator can add new room details to the system.  
+4.3.2. Trigger:  
 •	Extended from Manage Room.  
-5.4. Use case: Update Room  
-5.4.1. Description: Administrator can modify details of an existing room.  
-5.4.2. Trigger:  
+4.4. Use case: Update Room  
+4.4.1. Description: Administrator can modify details of an existing room.  
+4.4.2. Trigger:  
 •	Extended from Manage Room.  
-5.5. Use case: Delete Room  
-5.5.1. Description: Administrator can remove room data from the system.  
-5.5.2. Trigger:  
+4.5. Use case: Delete Room  
+4.5.1. Description: Administrator can remove room data from the system.  
+4.5.2. Trigger:  
 •	Extended from Manage Room.  
-5.6. Use case: Manage Booking  
-5.6.1. Description: Administrator can view and manage customer bookings.  
-Includes:  
-•	View Booking History  
-5.7. Use case: View Booking Customers’ Histories  
-5.7.1. Description: Administrator can see the booking records of customers.  
-5.7.2. Trigger:  
-•	Extended from Manage Booking.  
-5.8. Use case: View Reports  
-5.8.1. Description: Administrator can generate and view reports about room usage, bookings, and payments.  
-5.8.2. Postconditions:  
-•	Reports are displayed or exported for analysis.  
+4.6. Use case: Manage Booking  
+4.6.1. Description: Administrator can view and manage customer bookings.  
 
 ## V. Class diagram:
 ![Class Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Ho%C3%A0i.png)
