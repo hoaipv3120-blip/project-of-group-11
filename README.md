@@ -52,12 +52,13 @@ When a password is forgotten, the system automatically generates a new one and s
 
 ## III. Data Flow Diagram:  
 
- ![DFD Level 0](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_DFDLevel_0.png)
- ![DFD Level 1](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_DFDLevel_1.png)
+ ![DFD Level 0](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_DFD_Level_0.drawio.png)
+ ![DFD Level 1](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_DFD_Level_1.drawio.png)
+ ![DFD Level 2](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_DFD_Level_2.drawio.png)
 
 ## IV. Use-case diagram:  
 ### 1.	Sơ đồ tổng quan:  
-![Use-Case Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Q_Trang.png)
+![Use-Case Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Use_case.drawio.png)
 
 #### 1.1.	List of actors:  
 | Orders | Actor         | Functional Description / Requirement Specification |
@@ -201,7 +202,7 @@ When a password is forgotten, the system automatically generates a new one and s
 ![Class Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-Class%20diagram.drawio.png)
 
 ## VI. Data model:
-![Data model](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Trang.png)
+![Data model](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Data_model.drawio.png)
  
 ## BẢNG ĐÁNH GIÁ THÀNH VIÊN  
 | Họ và tên | MSSV | Nhiệm vụ | Mức độ hoàn thành |
