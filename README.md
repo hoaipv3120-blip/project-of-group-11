@@ -65,7 +65,6 @@ When a password is forgotten, the system automatically generates a new one and s
 | **1** | **User** | A non-registered or not-logged-in person who can browse and search rooms, and view room details, but cannot make bookings. |
 | **2** | **Customer** | A registered and logged-in user who can search and view room details, book rooms, cancel bookings, provide cancellation reasons, and update personal profile. |
 | **3** | **Administrator** | The system administrator with full privileges. Responsible for managing customers, managing rooms (add, update, delete), managing bookings. |
-| **4** | **Payment** | An internal or third-party payment service responsible for processing transactions, updating payment status, and handling refunds for canceled bookings. |
  
 
 #### 1.2 List of Use-case:
@@ -73,19 +72,19 @@ When a password is forgotten, the system automatically generates a new one and s
 |:-------:|:----------------------------|:---------------------------------|
 | **1** | **Register** | Allows a new user to create an account to access the system. |
 | **2** | **Login** | Allows a user to log in with valid credentials. The session remains active until the user logs out or the session times out. |
-| **3** | **Search Room** | Enables users to search for available rooms based on filters such as date, room type, or price (**Extends:** View Room Detail). |
-| **4** | **View Room Detail** | Displays detailed information about a selected room (type, price, facilities, description, etc.). |
-| **5** | **Book Room** | Allows customers to reserve a room for selected dates. (**Includes:** Process Payment, Update Booking Status). |
-| **6** | **Update Booking Status** | Updates the status of a booking (booked, confirmed, canceled, completed, etc.). |
-| **7** | **Cancel Booking** | Allows customers to cancel an existing booking (**Includes:** Provide Reason, Update Booking Status). |
-| **8** | **Provide Reason** | Collects the reason from the customer when canceling a booking (**Included from:** Cancel Booking). |
-| **9** | **Update Profile** | Allows customers to edit their personal information (name, phone number, email, password, etc.). |
+| **3** | **Search Room** | Enables users to search for available rooms based on filters such as date, room type, or price. |
+| **4** | **View Room Detail** | Displays detailed information about a selected room. |
+| **5** | **Book Room** | Allows customers to reserve a room for selected dates. |
+| **6** | **Update Booking Status** | Updates the status of a booking. |
+| **7** | **Cancel Booking** | Allows customers to cancel an existing booking. |
+| **8** | **Provide Reason** | Collects the reason from the customer when canceling a booking. |
+| **9** | **Update Profile** | Allows customers to edit their personal information. |
 | **10** | **Manage Customer** | Enables the Administrator to view, edit, or delete customer accounts. |
-| **11** | **Add Room** | Allows the Administrator to add a new room into the system (**Extended from:** Manage Room). |
-| **12** | **Update Room** | Allows the Administrator to modify an existing room’s details (**Extended from:** Manage Room). |
-| **13** | **Delete Room** | Allows the Administrator to remove a room from the system (**Extended from:** Manage Room). |
+| **11** | **Add Room** | Allows the Administrator to add a new room into the system. |
+| **12** | **Update Room** | Allows the Administrator to modify an existing room’s details. |
+| **13** | **Delete Room** | Allows the Administrator to remove a room from the system. |
 | **14** | **Manage Booking** | Enables the Administrator to manage customer bookings. |
-| **15** | **Manage Room** | Allows the Administrator to manage and maintain all room-related data (**Extends:** Add, Update, Delete Room). |
+| **15** | **Manage Room** | Allows the Administrator to manage and maintain all room-related data. |
 
 
 ### 2. Actor: User  
@@ -116,7 +115,7 @@ When a password is forgotten, the system automatically generates a new one and s
 2.3. Use case: Search Room  
 2.3.1. Description: User can search for available rooms based on preferences such as date, type, or price.  
 2.3.2. Extensions:  
-•	<<extend>> View Room Detail – when user selects a specific room.  
+•	View Room Detail – when user selects a specific room.  
 2.3.3. Main Flow:  
 •	User enters search criteria.  
 •	System displays a list of available rooms.  
@@ -124,21 +123,14 @@ When a password is forgotten, the system automatically generates a new one and s
 2.4. Use case: View Room Detail  
 2.4.1. Description: User can view detailed information of a selected room, including type, price, and facilities.  
 2.4.2. Trigger:  
-•	Extended from Search Room.  
-2.5. Use case: Update profile  
-2.5.1. Description: User can edit and update their personal details such as name, phone number, or password.  
-2.5.2. Preconditions:  
-•	User is logged in.  
-2.5.3. Postconditions:  
-•	Updated profile information is saved successfully.  
+•	Extended from Search Room.   
 ### 3. Actor: Customer ( inherits from User)  
 3.1. Use case: Book Room  
-3.1.1. Description: Customer can book an available room for specific dates and complete payment online.  
+3.1.1. Description: Customer can book an available room for specific dates and payment.  
 3.1.2. Preconditions:  
 •	Customer is logged in.  
 •	Room is available.  
 3.1.3. Includes:  
-•	Process Payment  
 •	Update Booking Status  
 3.1.4. Main Flow:  
 •	Customer selects a room and booking date.  
@@ -156,13 +148,27 @@ When a password is forgotten, the system automatically generates a new one and s
 3.2.4. Main Flow:  
 •	Customer selects booking to cancel.  
 •	Customer provides reason.  
-•	System processes refund.  
 •	System updates booking status.  
 •	Cancellation confirmation is displayed.  
 3.3. Use case: Provide Reason  
 3.3.1. Description: Customer can provide the reason for cancelling a booking.  
 3.3.2. Trigger:  
 •	Included from Cancel Booking.  
+3.4. Use case: Update profile  
+3.4.1. Description: User can edit and update their personal details such as name, phone number, or password.  
+3.4.2. Preconditions:  
+•	User is logged in.  
+3.4.3. Postconditions:  
+•	Updated profile information is saved successfully. 
+3.5. Update Booking Status.
+3.5.1. Description: Allows the customer to view and update the booking status.  
+3.5.2. Preconditions:
+•	The booking exists.  
+3.5.3. Postconditions:  
+•	The system updates the booking status.  
+3.5.4. Includes:  
+•	Book Room.  
+
 ### 4. Actor: Administrator  
 4.1. Use case: Manage Customer  
 4.1.1. Description: Administrator can view, edit, and remove customer accounts.  
