@@ -199,7 +199,7 @@ When a password is forgotten, the system automatically generates a new one and s
 4.6.1. Description: Administrator can view and manage customer bookings.  
 
 ## V. Class diagram:
-![Class Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group%2011-Class%20diagram.drawio.png)
+![Class Diagram](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Class_diagram.drawio.png)
 
 ## VI. Data model:
 ![Data model](https://github.com/hoaipv3120-blip/project-of-group-11/blob/main/Group11_Data_model.drawio.png)
